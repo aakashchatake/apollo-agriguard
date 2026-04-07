@@ -1,0 +1,111 @@
+# Apache Configuration for Apollo AgriGuard
+# Performance, Security, and SEO Optimization
+
+# Enable Gzip Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Set Expires Headers for Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 7 days"
+    
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    
+    # CSS/JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # HTML/XML
+    ExpiresByType text/html "access plus 7 days"
+    ExpiresByType application/xhtml+xml "access plus 7 days"
+    ExpiresByType application/xml "access plus 7 days"
+    
+    # Fonts
+    ExpiresByType font/truetype "access plus 1 year"
+    ExpiresByType font/opentype "access plus 1 year"
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+    ExpiresByType application/x-font-woff "access plus 1 year"
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Prevent clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Enable XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    
+    # Enable HSTS (optional - uncomment for HTTPS-only sites)
+    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# Rewrite Rules
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirect non-www to www (adjust as needed)
+    # RewriteCond %{HTTP_HOST} ^apollo-agriguard.com [NC]
+    # RewriteRule ^(.*)$ https://www.apollo-agriguard.com/$1 [L,R=301]
+    
+    # Force HTTPS (uncomment if on HTTPS)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Clean URLs (if needed)
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule ^([^.]+)$ $1.html [L]
+</IfModule>
+
+# Block directory listing
+<FilesMatch "^$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+Options -Indexes
+
+# Disable access to sensitive files
+<FilesMatch "\.(env|json|xml|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protect .htaccess itself
+<FilesMatch "^\.">
+    Deny from all
+</FilesMatch>
+
+# Set UTF-8 encoding
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .css .js .html .xml
+
+# Handle errors
+ErrorDocument 404 /index.html

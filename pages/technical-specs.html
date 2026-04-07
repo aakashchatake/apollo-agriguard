@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apollo AgriGuard Technical Specifications - Complete system details, robotics architecture, and performance metrics.">
+    <title>Technical Specifications - Apollo AgriGuard</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg">
+    <link rel="stylesheet" href="../css/premium-style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                Apollo<strong>Guard</strong>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#technology">Technology</a></li>
+                <li><a href="/#success">Success Story</a></li>
+                <li><a href="/#research">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section style="padding-top: 8rem;">
+        <div class="section-title">
+            <h2>Technical Specifications</h2>
+            <p>Detailed system architecture and performance metrics</p>
+        </div>
+
+        <!-- Robotics Platform -->
+        <div style="margin-top: var(--spacing-2xl); padding: var(--spacing-xl); background: var(--neutral-bg); border-radius: var(--radius-lg);">
+            <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-lg);">
+                <i class="fas fa-robot" style="margin-right: var(--spacing-sm);"></i> Robotics Platform
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div>
+                    <h4>Frame & Structure</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Material: Aluminum 6061-T6</li>
+                        <li>Weight: 80-120 kg (loaded)</li>
+                        <li>Dimensions: 1.2m × 0.8m × 1.5m</li>
+                        <li>Ground Clearance: 400mm</li>
+                        <li>IP Rating: IP67 (dust & water resistant)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Motor Systems</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Drive Motors: 4× 48V brushless DC, 1.5 kW each</li>
+                        <li>Max Speed: 2.5 m/s</li>
+                        <li>Torque: 300 Nm per wheel</li>
+                        <li>Harvesting Motor: 3-5 kW variable</li>
+                        <li>Gripper Actuators: Pneumatic & Electric hybrid</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Power & Energy</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Battery: LiFePO4 48V 200Ah (9.6 kWh)</li>
+                        <li>Runtime: 6-8 hours continuous</li>
+                        <li>Fast Charge: 2 hours (80%)</li>
+                        <li>Solar Integration: 400W optional panels</li>
+                        <li>Fuel Cell Support: H2 backup system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sensor Suite -->
+        <div style="margin-top: var(--spacing-2xl); padding: var(--spacing-xl); background: var(--neutral-bg); border-radius: var(--radius-lg);">
+            <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-lg);">
+                <i class="fas fa-eye" style="margin-right: var(--spacing-sm);"></i> Advanced Sensor Suite
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div>
+                    <h4>Vision Systems</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>RGB Cameras: 4× 4MP, 120 FPS</li>
+                        <li>Thermal Camera: 640×512 radiometric</li>
+                        <li>LiDAR: 64-beam, 100m range</li>
+                        <li>Hyperspectral: 400-2500nm multispectral</li>
+                        <li>Stereo Depth: Real-time 3D mapping</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Environmental Sensors</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>GPS/RTK: ±2cm positioning accuracy</li>
+                        <li>IMU: 9-axis inertial measurement</li>
+                        <li>Weather Station: Temp, humidity, wind</li>
+                        <li>Soil Sensors: Moisture, pH, nitrogen</li>
+                        <li>Barometer: Altitude & pressure</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Communication</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Cellular: 4G/5G modem</li>
+                        <li>WiFi: Dual-band 802.11ax</li>
+                        <li>Mesh Network: 2.4GHz LoRa</li>
+                        <li>Bandwidth: Up to 1Gbps</li>
+                        <li>Latency: &lt;50ms typical</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Computing & AI -->
+        <div style="margin-top: var(--spacing-2xl); padding: var(--spacing-xl); background: var(--neutral-bg); border-radius: var(--radius-lg);">
+            <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-lg);">
+                <i class="fas fa-brain" style="margin-right: var(--spacing-sm);"></i> Edge Computing & AI
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div>
+                    <h4>Primary Computing</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>SBC: NVIDIA Jetson AGX Orin</li>
+                        <li>CPU: 12-core ARM v8.2 @ 2.0 GHz</li>
+                        <li>GPU: 12-core NVIDIA CUDA</li>
+                        <li>Memory: 32GB unified LPDDR5</li>
+                        <li>Storage: 512GB NVMe SSD</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>AI/ML Models</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>AgriVision CNN: ResNet-50 backbone</li>
+                        <li>Crop Detection: YOLO v8 real-time</li>
+                        <li>Maturity Classification: Custom ensemble</li>
+                        <li>Anomaly Detection: Autoencoder models</li>
+                        <li>Weather Prediction: LSTM sequences</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Software Stack</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>OS: Ubuntu 22.04 LTS</li>
+                        <li>Middleware: ROS 2 Humble</li>
+                        <li>Framework: TensorFlow, PyTorch</li>
+                        <li>Language: Python, C++, ROS2</li>
+                        <li>Version Control: Git, CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div style="margin-top: var(--spacing-2xl); padding: var(--spacing-xl); background: var(--neutral-bg); border-radius: var(--radius-lg);">
+            <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-lg);">
+                <i class="fas fa-chart-line" style="margin-right: var(--spacing-sm);"></i> Performance Metrics
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+                <div>
+                    <h4>Operational Performance</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Coverage Rate: 2-3 hectares/hour</li>
+                        <li>Accuracy: 98.5% crop detection</li>
+                        <li>Processing Speed: 30 FPS real-time</li>
+                        <li>Decision Latency: &lt;100ms</li>
+                        <li>Reliability: 99.2% uptime</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Environmental Resistance</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Operating Temp: -10°C to +50°C</li>
+                        <li>Humidity: 10% to 95% non-condensing</li>
+                        <li>Wind Resistance: Up to 40 km/h</li>
+                        <li>Rain Operation: Continuous</li>
+                        <li>Mud/Dust: IP67 rating</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Autonomous Capabilities</h4>
+                    <ul style="list-style-position: inside;">
+                        <li>Max Autonomy: 8+ hours</li>
+                        <li>Field Mapping: Real-time SLAM</li>
+                        <li>Obstacle Avoidance: 360° coverage</li>
+                        <li>Collision Detection: &lt;10cm</li>
+                        <li>Return to Base: Automatic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Architecture Diagram -->
+        <div style="margin-top: var(--spacing-2xl); padding: var(--spacing-xl); background: var(--neutral-bg); border-radius: var(--radius-lg);">
+            <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-lg);">
+                <i class="fas fa-sitemap" style="margin-right: var(--spacing-sm);"></i> System Architecture
+            </h3>
+            
+            <div style="background: linear-gradient(135deg, #F5A842 0%, #D4A574 100%); color: white; padding: var(--spacing-xl); border-radius: var(--radius-md);">
+                <p style="margin: 0;">
+                    <strong>Hardware Stack:</strong> Sensors → Edge Computing (Jetson AGX Orin) → ROS 2 Middleware → Mission Planner → Motor Control
+                </p>
+                <p style="margin: var(--spacing-md) 0 0 0;">
+                    <strong>Software Stack:</strong> Camera Feed → AI Inference (AgriVision) → Decision Engine → Cloud Sync → Remote Dashboard
+                </p>
+                <p style="margin: var(--spacing-md) 0 0 0;">
+                    <strong>Communication:</strong> Onboard LAN → 4G/5G/WiFi → Cloud Server → Web Dashboard / Mobile App
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <footer-content>
+            <div>
+                <h4>Apollo AgriGuard</h4>
+                <p>Technical specifications for autonomous agricultural robotics.</p>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://aakashchatake.github.io/Apollo_AgriGuard.html" target="_blank"><i class="fas fa-external-link-alt" style="margin-right: 0.3rem;"></i>Live Demo</a></li>
+                    <li><a href="https://apollosight.chatakeinnoworks.com/" target="_blank"><i class="fas fa-brain" style="margin-right: 0.3rem;"></i>AgriVision CNN</a></li>
+                    <li><a href="https://apollo-agriguard-ijaegxe.gamma.site/" target="_blank"><i class="fas fa-presentation-screen" style="margin-right: 0.3rem;"></i>Presentation</a></li>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../#technology">Technology</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><strong>Chatake Innoworks Pvt. Ltd.</strong></li>
+                    <li>Nehru Industrial Estate</li>
+                    <li>Damani Nagar, Solapur 413001</li>
+                    <li><a href="tel:+918600182228" style="color: var(--accent-gold); text-decoration: none;">+91 8600 182 228</a></li>
+                </ul>
+            </div>
+        </footer-content>
+        <footer-bottom>
+            <p>&copy; 2026 Apollo AgriGuard by Chatake Innoworks. All rights reserved.</p>
+        </footer-bottom>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "apollo-agriguard-website",
+  "version": "1.0.0",
+  "description": "Premium autonomous agricultural robotics website by Chatake Innoworks",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aakashchatake/apollo-agriguard.git"
+  },
+  "keywords": [
+    "autonomous robotics",
+    "agriculture",
+    "artificial intelligence",
+    "harvesting systems",
+    "agricultural technology",
+    "agritech",
+    "ROS",
+    "machine learning"
+  ],
+  "author": "Chatake Innoworks",
+  "license": "All Rights Reserved",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'Testing'",
+    "lighthouse": "lighthouse https://localhost:8000 --view",
+    "validate": "npx html-validator --file=index.html",
+    "minify-css": "csso-cli css/*.css -o css/*.min.css",
+    "minify-js": "terser js/*.js -o js/*.min.js -c -m"
+  },
+  "devDependencies": {
+    "csso-cli": "^4.0.0",
+    "terser": "^5.20.0",
+    "lighthouse": "^10.0.0",
+    "html-validator": "^7.0.0"
+  },
+  "staticFiles": {
+    "staticPath": ".",
+    "staticFileGlobs": [
+      "**/*.html",
+      "**/*.css",
+      "**/*.js",
+      "assets/**/*",
+      "downloads/**/*"
+    ]
+  }
+}
